@@ -1,0 +1,511 @@
+@charset "UTF-8";
+
+/* --------------------------------------------------------- 
+
+	DIGITAL CAMPUS - RENNES
+	Frédéric PACHOT - frederic.pachot@digital-campus.fr
+	
+	MODULE WEBDESIGN
+	Cours d'intégration - HTML/CSS
+    
+    DIGITAL HAIR 
+        > 2017 - version B 1.0 (statique, colonnes en pixels)
+	
+	COULEURS.
+	orange :   #ea5526 / rgb(234,85,38)
+	bleu :     #a2bed2 / rgb(162,190,210)
+    gris :     #a4a4a4 / rgb(164,164,164)
+
+/* --------------------------------------------------------- */
+
+
+/*--- INDISPENSABLES ---*/
+
+/* boites */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* clearfix */
+.clearfix::after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+/* texte caché */
+.hidden_text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* navigations */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*--- GRILLE ---*/
+
+/* colonnes */
+
+.col-12 {
+    width: 940px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.col-8 {
+    width: 620px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.col-6 {
+    width: 460px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.col-4 {
+    width: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.col-3 {
+    width: 220px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* alignements */
+
+.grid_center {
+    margin: 0 auto;
+}
+
+/* marges */
+
+/*--- LIENS & BOUTONS ---*/
+
+a {
+    text-decoration: none;
+}
+
+/* bouton 1 */
+.btn-1:link,
+.btn-1:visited {
+    display: block;
+    background: rgb(234,85,38);
+    padding: 15px 30px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all, 0.5s;
+}
+
+.btn-1:hover,
+.btn-1:focus,
+.btn-1:active {
+    background-color: rgb(162,190,210);
+}
+
+/*--- TEXTES ---*/
+
+html {
+    font-family: 'Raleway', sans-serif;
+    font-size: 75%;
+    line-height: 1.5em;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+h3 {
+font-family: 'Quicksand', sans-serif;
+}
+
+/* titres sections */
+
+h2.title_section {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    line-height: 1.5em;
+    color: rgb(162,190,210);
+}
+
+h2.title_section span {
+    display: block;
+    padding-top: 10px;
+    color:#000;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    border-top: 1px solid orange;
+}
+
+/*
+.title_container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.title_container h2 {
+    color: rgb(162,190,210);
+    margin: 0;
+}
+
+.title_container h3 {
+    margin: 0;
+    display: inline;
+    font-size: 3.5em;
+    color: #000;
+    text-transform: uppercase;
+    border-top: 1px solid orange;
+}
+*/
+
+/* --------------------------------------------------------- */
+
+
+/*--- HEADER ---*/
+
+header {
+}
+
+    /* header top */
+header div#header_top {
+    background-color: white;
+    height: 100px;
+    padding-top: 35px;
+}
+
+header div#header_top div#logo_box {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*
+header div#header_top h1 {
+    font-size:0;
+}
+*/
+
+
+    /* main nav */
+header nav#main_nav {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 6px;
+    margin-left: 40px;
+}
+
+header nav#main_nav ul {
+    font-size: 0;
+}
+
+header nav#main_nav ul li {
+    display: inline-block;
+    font-size: 1rem;  
+}
+
+header nav#main_nav ul li a:link,
+header nav#main_nav ul li a:visited {
+/*    display: block;*/
+    padding: 5px 10px;
+    margin: 0 10px;
+    color: rgb(164,164,164);    
+    text-transform: uppercase;
+    transition: all, 0.5s;
+}
+
+header nav#main_nav ul li a:hover,
+header nav#main_nav ul li a:focus,
+header nav#main_nav ul li a:active,
+header nav#main_nav ul li a.active {
+    background: rgb(162,190,210);
+    color: #fff;
+}
+
+header nav#main_nav ul li:first-child a {
+    margin-left: 0;
+}
+
+header nav#main_nav ul li:last-child a {
+    margin-right: 0;
+}
+
+    /* slider */
+
+header section#slider {
+    width: 100%;
+/*    min-width: 960px;*/
+    height: 480px;
+    overflow: hidden;
+    position: relative;
+}
+
+header section#slider div#slider_infos {
+    position: absolute;
+    z-index:100;
+    left:0;
+    top: 0;
+    width: 100%;
+}
+
+header section#slider div#slider_infos div#text_slider {
+/*    padding-top: 140px;*/
+}
+
+header section#slider div#slider_infos div#text_slider h2 {
+    color:rgb(164,164,164);
+    margin: 0;
+}
+
+header section#slider div#slider_infos div#text_slider h3 {
+    margin: 0 ;
+    font-size: 2.75em;
+    line-height: 1em;
+}
+
+header section#slider div#slider_infos div#text_slider a.btn-1 {
+    margin: 50px 0 0 0; 
+}
+
+header section#slider #img_slider{
+/*    width: 100%;*/
+    height: 480px;
+    text-align: center;
+}
+
+header section#slider #img_slider img {
+    width: 100%;
+    min-width: 1366px;
+    height: auto;
+}
+
+/*--- MAIN ---*/
+
+main {
+   
+}
+
+/* salon */
+
+main section#salon {
+    padding: 50px 0;
+}
+
+main section#salon h2.title_section {
+    width: 250px;
+}
+
+main section#salon article {
+    margin-left: 0;
+    color:grey;
+    float: left;
+}
+
+main section#salon article p.introduction {
+    color: #000;
+    font-weight: 700;
+}
+
+main section#salon aside {
+    height: 420px;
+    text-align: right;
+/*    margin-top: 50px;*/
+    margin-right: 0;
+    float: left;
+}
+
+main section#salon aside img{
+    float: left;
+}
+
+main section#salon aside img#img_salon-1{
+    margin-right: 10px;
+}
+
+main section#salon aside img#img_salon-2{
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+main section#salon aside img#img_salon-3{
+    margin-left: 10px;
+}
+
+/* services */
+
+main section#services {
+    background: url(../images/bg_services.jpg) no-repeat center center;
+    background-size: cover;
+    height: 550px;
+    padding: 75px 0;
+}
+
+main section#services h2.title_section {
+    width: 250px;
+}
+
+
+/* témoignages */
+
+main section#temoignages {
+    padding: 60px 0;
+}
+
+main section#temoignages h2.title_section {
+    width: 370px;
+    margin-bottom: 80px;
+}
+
+
+main section#temoignages article.temoignage {
+    background: url(../images/ico_guillemets.gif) no-repeat center top;
+    padding-top: 25px; 
+    text-align: center;
+    color: rgb(164,164,164);
+    float: left;
+}
+
+main section#temoignages article.temoignage:first-of-type {
+    margin-left: 0;
+}
+
+main section#temoignages article.temoignage:last-of-type {
+    margin-right: 0;
+}
+
+main section#temoignages article.temoignage p.temoin {
+    color: rgb(234,85,38);
+    text-transform: uppercase;
+}
+
+
+
+/* contact */
+
+main section#contact {
+    background: url(../images/bg_contact.jpg) no-repeat center center;
+    background-size: cover;
+    height: 650px;
+    padding: 70px 0 50px 0;
+    color: #fff;
+}
+
+main section#contact div#contact_background {
+    background: #000;
+    padding: 25px 80px;
+    width: 580px;
+    height: 510px;
+    border: 1px solid #fff;
+    outline: 20px solid #000;
+}
+
+main section#contact h2.title_section {
+    width: 250px;
+}
+
+main section#contact h2.title_section span {
+    color: #fff;
+}
+
+main section#contact article#adress {
+    text-align: center;
+    font-size: 1.25em;
+}
+
+/*--- FOOTER ---*/
+
+footer {
+    background: #000;
+    height: 100px;
+    padding-top: 25px;
+    color: #fff;
+    font-size: 0;
+}
+
+footer img {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+/* social nav */
+footer nav#social_nav {
+    display: inline-block;
+    font-size: 1rem;
+    margin-left: 245px;
+    margin-right: 20px;
+/*    vertical-align: top;*/
+}
+
+footer nav#social_nav ul {
+    font-size: 0;
+}
+
+footer nav#social_nav ul li {
+    display: inline-block;
+    
+    font-size: 1rem;
+}
+
+footer nav#social_nav ul li a:link,
+footer nav#social_nav ul li a:visited {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    margin: 0 16px;
+}
+
+footer nav#social_nav ul li a:hover,
+footer nav#social_nav ul li a:focus,
+footer nav#social_nav ul li a:active {
+    opacity: 0.75;
+}
+
+footer nav#social_nav ul li a {
+    
+}
+
+footer nav#social_nav ul li:first-child a {
+    margin-left: 0;
+}
+
+footer nav#social_nav ul li:last-child a {
+    margin-right: 0;
+}
+
+
+footer p {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1rem;
+}
+
+/* --------------------------------------------------------- 
+	COULEURS.
+	orange :   #ea5526 / rgb(234,85,38)
+	bleu :     #a2bed2 / rgb(162,190,210)
+    gris :     #a4a4a4 / rgb(164,164,164)
+
+--------------------------------------------------------- */
+
+
+
+
+
+
